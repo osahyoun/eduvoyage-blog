@@ -1,0 +1,38 @@
+/* =png support */
+#header h1 a  { 
+	behavior: url("/stylesheets/iepngfix.htc") 
+}
+
+#footer .wrap, form {
+	background-image: none;
+}
+
+/* =main nav */	
+#header {
+	float: none;
+	}
+
+#header h1 a {
+	z-index: 1000;
+	position: relative;
+	}
+	
+#header ul li {
+	float: left;
+}
+
+/* =thumb lists */
+.thumbs li a {
+	zoom: 1;
+	}
+
+/* =footer */
+
+#footer dl {
+	display: inline;	
+}
+
+pre {
+  overflow-y: hidden; 
+  width:550px;
+}

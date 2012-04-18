@@ -1,0 +1,15 @@
+/* =main nav */	
+#header {
+	float: none;
+	}
+	
+#header ul li {
+	float: left;
+}
+
+/* =thumb lists */
+.thumbs li a {
+	zoom: 1;
+	}
+
+

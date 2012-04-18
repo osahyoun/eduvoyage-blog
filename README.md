@@ -1,5 +1,4 @@
-## Instagram Search Web App ##
+## eduvoyage.com ##
 
-A stupidly simple web app for searching Instagram's API by tag.
+My Blog: [eduvoyage.com](eduvoyage.com)
 
-App has accompanying tutorial over at http://eduvoyage.com

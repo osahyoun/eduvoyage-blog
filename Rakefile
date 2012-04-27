@@ -1,43 +1,21 @@
+task :default => :server
 
-def jekyll(opts="", path="")
-  sh "rm -rf _site"
-  sh path + "jekyll " + opts
-end
-
-desc "Build site using Jekyll"
+desc 'Build site with Jekyll'
 task :build do
-  jekyll
+  jekyll '--no-server'
 end
 
-desc "Serve on Localhost with port 4000"
-task :default do
-  jekyll "--server --auto"
+desc 'Build and start server with --auto'
+task :server do
+  jekyll '--server --auto'
 end
 
-desc "Serve on Localhost with port 4000 using development version"
-task :unstable do
-  jekyll "--server --auto", "../jekyll/bin/"
+desc 'Build and deploy'
+task :deploy => :build do
+  sh 'rsync -rtzh --progress --delete _site/ omar@eduvoyage.com:~/public_html/eduvoyage.com/'
 end
 
-desc "Deploy to Dev"
-task :deploy => :"deploy:dev"
-
-namespace :deploy do
-  desc "Deploy to Dev"
-  task :dev => :build do
-    rsync "dev.appden.com"
-  end
-
-  desc "Deploy to Live"
-  task :live => :build do
-    rsync "appden.com"
-  end
-
-  desc "Deploy to Dev and Live"
-  task :all => [:dev, :live]
-
-  def rsync(domain)
-    sh "rsync -rtz --delete _site/* omar@edge.itickerapp.com:~/public_html/blog.itickerapp.com/public"
-  end
+def jekyll(opts = '')
+  sh 'rm -rf _site'
+  sh 'jekyll ' + opts
 end
-

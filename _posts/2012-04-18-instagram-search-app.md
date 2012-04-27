@@ -3,14 +3,14 @@ layout: post
 meta_keywords: javascript, instagram, api, web app
 meta_description: How to build a simple web app with JavaScript, for searching Instagram's photos by tag.
 comment_id: eduvoyage-1
-title: One Way to Build your own Instagram Search App
+title: Search Instagram Tutorial [Part 1] - Building a Web App for Searching Instagram
 pretty_date: Wednesday, 18 April 2012
 ---
 
 
-This post will document my attempt at creating a simple, single page web app, allowing a visitor to search Instagram for photos by tag. You can see the working app [here...](/instagram-search). App was developed on a webkit browser (Google Chrome).
+This post will document my attempt at creating a simple, single page web app, allowing a visitor to search Instagram for photos by tag. You can see the working app [here](http://grammy.eduvoyage.com). App was developed on a webkit browser (Google Chrome).
 
-You can download code as a zipped package from [here](https://github.com/osahyoun/Instagram-Search/zipball/master), or clone the codebase from [here](https://github.com/osahyoun/instagram-search).
+You can download code as a zipped package from [github](https://github.com/osahyoun/instagram-search/zipball/v0.1), or [clone the codebase](https://github.com/osahyoun/instagram-search).
 
 Getting started, I visit Instagram's [API documentation](http://instagr.am/developer/) to learn how I can search for photos by tag. Registration is required, so I follow the instructions under **GETTING STARTED**.
 
@@ -389,4 +389,5 @@ In another iteration it might be worth implementing the following features:
 * Error handling (gracefully deal with invalid tags, API server down...).
 * Bookmarking searches, for future reference.
 * Marking favourite photos for quick retrieval at a later date.
-* Displaying more photo data (username, comments, ...).
+* Add pagination.
+* Displaying more photo data (username, comments).

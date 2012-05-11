@@ -3,7 +3,8 @@ layout: post
 meta_keywords: javascript, instagram, api, web app, pagination
 meta_description: Continuing from last weeks tutorial, I'll be implementing pagination.
 comment_id: eduvoyage-2
-title:  Search Instagram Tutorial [Part 2] - Implementing Pagination
+title: Instagram Web App Tutorial Part 2 - Implementing Pagination
+short: Instagram Web App Tutorial Part 2
 pretty_date: Wednesday, 27 April 2012
 ---
 

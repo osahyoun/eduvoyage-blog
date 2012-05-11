@@ -1,19 +1,24 @@
 {% include header.html %}
 <div class="wrap">
-  <div class="main main_left">
-    {% for post in site.posts %}
-    <div class="entry">
-
-        <h2><a href='{{post.url}}'>{{ post.title }}</a> <span>{{post.pretty_date)}}</span></h2>
-        {{ post.content  | markdownify }}
-
-        <p class="small"><a data-disqus-identifier={{post.comment_id}} href="{{post.url}}#disqus_thread">comments</a></p>
+  <div class="main main_left" id='left_col'>
+  {% for post in site.posts %}
+      <div class='entry'>
+      <h2 class='shadow'><a href="{{post.url}}">{{ post.title }}</a></h2>
+      <div class='sub'>
+        <p class='date shadow'>{{post.pretty_date)}}
+          / <small>
+            <a data-disqus-identifier={{post.comment_id}} href="{{post.url}}#disqus_thread">comments</a>
+          </small>
+        </p>
       </div>
-    {% endfor %}
-  </div>
+      {{ post.content  | markdownify }}
+      </div>
+  {% endfor %}
+    </div>
+    <div id='right_col'>
+      {% include articles.html%}
+    </div>
 </div>
-
-{% include footer.html %}
 
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -27,12 +32,5 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
+{% include footer.html %}
 
-
-
-<!--   <div id="history">
-  <p class="self_clear">
-    <span class="newer"><a href="#">&laquo;Newer Posts</a></span>
-    <a href="#">Home</a>
-    <span class="older"><a href="#">Older Posts&raquo;</a></span></p>
-  </div><!-- end div#history -->

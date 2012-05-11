@@ -3,7 +3,8 @@ layout: post
 meta_keywords: javascript, instagram, api, web app
 meta_description: How to build a simple web app with JavaScript, for searching Instagram's photos by tag.
 comment_id: eduvoyage-1
-title: Search Instagram Tutorial [Part 1] - Building a Web App for Searching Instagram
+title: Instagram Web App Tutorial Part 1
+short: Instagram Web App Tutorial Part 1
 pretty_date: Wednesday, 18 April 2012
 ---
 

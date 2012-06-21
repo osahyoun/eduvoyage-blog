@@ -8,9 +8,11 @@ short: Instagram Web App Tutorial Part 2
 pretty_date: Wednesday, 27 April 2012
 ---
 
-A working version of this app is located [here](http://grammy.eduvoyage.com), and you can download the source code from [github](https://github.com/osahyoun/instagram-search/zipball/v0.2).
+<p class='intro'>
+This post follows on from <a href='http://eduvoyage.com/instagram-search-app.html'>last week's</a>. I'll be implementing pagination.
+</p>
 
-Following on from [last weeks post](http://eduvoyage.com/instagram-search-app.html), I'm going to implement pagination.
+A working version of this app is located [here](http://grammy.eduvoyage.com), and you can download the source code from [github](https://github.com/osahyoun/instagram-search/zipball/v0.2).
 
 I quite like google-image's solution to this problem, which is to have a single 'Show more results' button at the bottom of the page.
 

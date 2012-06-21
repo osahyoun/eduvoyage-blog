@@ -5,26 +5,34 @@
 }
 
 body {
-  color: #333;
   font: 15px Helvetica,arial,freesans,clean,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4;
-/*  background: transparent url('images/back.png') repeat 0 0;*/
 }
 
 a {
   color: #4183C4;
 }
 
-p {
+p, .post ul li {
   margin-bottom: 10px;
-  color: #666;
-  font-size: 15px;
+  color: #999;
+  font-size: 17px;
   line-height: 25px;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #4D4D4D;
-  font-family: 'proxima-nova',sans-serif;
   font-weight: 400;
+}
+
+.post ul li {
+ margin: 0;
+ list-style-type: square;
+}
+
+p code {
+  background-color: #F8F8F8;
+
 }
 
 p.date {
@@ -50,12 +58,6 @@ ul {
   margin: 10px 30px;
   list-style: none;
 }
-
-#right_col p {
-  font-size: 0.814em;
-  margin: 1.232em;
-  line-height: 1.615em;
-  }
 
 a, h3 a:hover, h1.title a:hover {
   text-decoration: none;
@@ -90,7 +92,9 @@ img {
 
 h2, h1.title {
   font-size: 25px;
-  color: #333333;
+  color: #555f64;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .shadow {
@@ -114,25 +118,21 @@ h3 a, h1.title a  {
 ------------------------------------------------------------ */
 
 .wrap {
-  width: 900px;
+  width: 960px;
   margin: 0 auto;
   }
 
 #content {
-/*  background: url(../images/bg_content.gif) repeat-x 0 0;*/
-/*  border-top: 1px solid #fff;*/
-/*  padding-top: 30px;*/
   margin-top: 70px;
-  }
+}
 
 
 .content-wrap {
-/*  background: -webkit-linear-gradient(#FAFAFA,#EAEAEA);*/
 }
 
 #left_col {
   float: left;
-  width: 560px;
+  width: 620px;
   padding-bottom: 30px;
   }
 
@@ -163,7 +163,7 @@ h3 a, h1.title a  {
 #header {
   float: left;
   width: 100%;
-  height: 50px;
+  height: 40px;
   top: 0;
   margin-bottom: 50px;
   background: #FAFAFA;
@@ -171,13 +171,14 @@ h3 a, h1.title a  {
 /*  background: -webkit-linear-gradient(#EAEAEA,#FAFAFA);*/
   background-image: -webkit-linear-gradient(top, #FAFAFA, #EAEAEA);
 background-image: -webkit-linear-gradient(top, #F5FBFF, #E4F0FF);
+background: white;
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
 /*  background: -moz-linear-gradient(#F5FBFF,#E4F0FF);
   background: -webkit-linear-gradient(#F5FBFF,#E4F0FF);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5fbff',endColorstr='#e4f0ff')";
 */  position: fixed;
   z-index: 10;
-  border-bottom: 1px solid #CEE0E7;
+/*  border-bottom: 1px solid #CEE0E7;*/
   box-shadow: 0 1px 0 rgba(255,255,255,0.4),0 0 10px rgba(0,0,0,0.1);
   }
 
@@ -200,18 +201,16 @@ background-image: -webkit-linear-gradient(top, #F5FBFF, #E4F0FF);
 }
 
 #header .wrap {
-  width: 900px;
+  width: 960px;
   margin: 0 auto;
   position: relative;
 }
 
 #header ul {
-/*  position: absolute;*/
   bottom: 10px;
   right: 0;
-  margin-top: 10px;
+  margin-top: 5px;
   float: right;
-/*  width: 23em;*/
   }
 
 #header ul li {
@@ -220,10 +219,6 @@ background-image: -webkit-linear-gradient(top, #F5FBFF, #E4F0FF);
 
 #header ul li div {
   float: left;
-  border: 1px solid #CEE0E7;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -o-border-radius: 4px;
   border-radius: 4px;
   width: 28px;
   height: 28px;
@@ -235,6 +230,19 @@ background-image: -webkit-linear-gradient(top, #F5FBFF, #E4F0FF);
 #header ul li div:hover {
   border-color: #b1e1f3;
 }
+
+#header ul li div img {
+ opacity: 0.7;
+ -webkit-transition:opacity 200ms ease-in;
+ -moz-transition:opacity 200ms ease-in;
+ -o-transition:opacity 200ms ease-in;
+ transition:opacity 200ms ease-in;
+}
+
+#header ul li div:hover img {
+ opacity: 1;
+}
+
 
 /* ------------------------------------------------------------
 
@@ -459,7 +467,7 @@ div.note {
 }
 
 div.sub {
-  border-bottom: 1px solid #CEE0E7;
+/*  border-bottom: 1px solid #CEE0E7;*/
   margin-bottom: 5px;
 }
 
@@ -486,4 +494,31 @@ div.posts-menu .meta {
 
 div.posts-menu li {
   margin-bottom: 5px;
+}
+
+p.intro {
+  clear: none;
+  color: #333;
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  text-shadow: rgba(255,255,255,1) 3px 1px 0px;
+  line-height: 30px;
+  background: #f9f9f9;
+  clear: both;
+  padding: 15px;
+  margin: 0 -10px;
+  font-weight: 300;;
+  -webkit-box-shadow: 0 1px 2px #ccc;
+  -moz-box-shadow: 0 1px 2px #ccc;
+  box-shadow: 0 1px 2px #ccc;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+#right_col p.twitter-button {
+  margin-left: 30px;
+  margin-top: 30px;
 }

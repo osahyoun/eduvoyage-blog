@@ -3,18 +3,13 @@
   <div class="main main_left" id='left_col'>
     <div class="post">
       <h2 class='shadow'>{{ page.title }}</h2>
-      <div class='sub'>
-        <p class='date shadow'>{{page.pretty_date)}}</p>
-      </div>
-      <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="omarsahyoun">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </p>
       {{ content }}
       {% include disqus.html  %}
       </div>
     </div>
     <div id='right_col'>
     {% include articles.html%}
+    {% include twitter_button.html  %}
     </div>
 </div>
 {% include footer.html %}

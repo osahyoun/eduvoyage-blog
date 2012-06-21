@@ -8,7 +8,11 @@ short: JSON-P - What and Why?
 pretty_date: Friday, 11 May 2012
 ---
 
-Web browsers support XMLHttpRequest's (Ajax) API for easily retrieving and posting data without reloading the document. The XMLHttpRequest JavaScript object, however, does not support cross-domain requests due to security rescritions imposed by the browser.
+<p class='intro'>
+This post explains JSON-P, a widely used technique for circumnavigating the web browsers security block on cross domain Ajax requests.
+</p>
+
+Web browsers support XMLHttpRequest's (Ajax) API for easily retrieving and posting data without reloading the document. The XMLHttpRequest JavaScript object, however, does not support cross-domain requests due to security restrictions imposed by the browser.
 
 So, if I make an Ajax request to Twitter's Search API, I'll be communicating with another domain, and so can expect a security error. Try the following in a JavaScript console on your favourite browser. I'm using Chrome.
 
@@ -25,22 +29,20 @@ $.get(resource, { q:'chimpanzee'})
 
 We get an `XMLHttpRequest cannot load` error, so no surprises there.
 
-I sure you're familiar with Twitter's JavaScript widget which one can embed directly into a website. The widget queries Twitter's Search API and displays the results on the page the script is loaded from. But how? Why doesn't the script get the `XMLHttpRequest cannot load` we saw above?
+I'm sure you're familiar with Twitter's JavaScript widget which one can embed directly into a website. The widget queries Twitter's Search API and displays the results on the page the script is loaded from. But how? Why doesn't the script get the `XMLHttpRequest cannot load` we saw above?
 
-This is how: the widget dynamically injects a `script` tag into the web document. `script` tags are permitted by browsers to load scripts hosted on other domains. So, by dynamically injecting a script tag after your web page has loaded, Twitter's widget can load data into your web document (originating from Twitter's domain) without having to reload your web page.
+This is how: the widget dynamically injects a `script` tag into the web document. `script` tags are permitted by browsers to load scripts hosted on other domains. So, by dynamically injecting a script tag after your web page has loaded, Twitter's widget can load data into your web document (originating from Twitter's domain) without
+having to reload your web page.
 
-Let's give it a try. In the same directory create two documents:
-
-`index.html`
+Let's give it a try. In the same directory create two documents - `index.html`:
 
 {% highlight html %}
-<!-- index.html -->
 <!DOCTYPE html>
 <html>
   <head></head>
   <body>
 
-    <script type="text/javascript" charset="utf-8">
+    <script>
 
       function get(url){
         // Create script tag
@@ -61,16 +63,15 @@ Let's give it a try. In the same directory create two documents:
 </html>
 {% endhighlight %}
 
-and `data.json`:
+...and `data.json`:
 
 {% highlight javascript %}
-// data.json
-{ animals: [
-  'cat',
-  'dog',
-  'mouse',
-  'koala']
-}
+  { animals: [
+    'cat',
+    'dog',
+    'mouse',
+    'koala']
+  }
 {% endhighlight %}
 
 
@@ -97,7 +98,9 @@ process(
 
 Notice the error displayed in the console:
 
-`Uncaught ReferenceError: process is not defined`
+{% highlight javascript %}
+Uncaught ReferenceError: process is not defined
+{% endhighlight %}
 
 This is a good error to get. It means code is being executed - the function `process` is being invoked. Let's define `process`:
 
@@ -129,15 +132,19 @@ This is a good error to get. It means code is being executed - the function `pro
 
 Refresh the browser and you should see a list of animals displayed to the window.
 
-This technique of passing JSON encoded data (which has been requested via a script tag) as an argument to a function is know as JSON-P. How do we get this technique to work with JSON-P savvy API's in the wild.
+This technique of passing JSON encoded data (which has been requested via a script tag) as an argument to a function is know as JSON-P. How do we get this technique to work with JSON-P savvy API's in the wild?
 
 Returning to Twitter's Search API, take this valid API request and paste it directly into your browser:
 
-`https://search.twitter.com/search.json?q=chimpanzee`
+{% highlight javascript %}
+https://search.twitter.com/search.json?q=chimpanzee
+{% endhighlight %}
 
-You'll see, as a response, a page full of JSON encoded data. Twitter's Search API is JSON-P enabled, so, with that in mind, return to the browser add one additional query parameter (callback) to the URL and reload:
+You'll see, as a response, a page full of JSON encoded data. Twitter's Search API is JSON-P enabled, so, with that in mind, add one additional query parameter (callback) to the URL and reload:
 
-`https://search.twitter.com/search.json?q=chimpanzee&callback=process`
+{% highlight javascript %}
+https://search.twitter.com/search.json?q=chimpanzee&callback=process
+{% endhighlight %}
 
 Notice how Twitter's response has changed? It's now doing exactly what we did in our `data.json` file. It's calling `process`, passing as its only argument the JSON encoded data. Change the value of `callback` and the name of the invoked function changes accordingly.
 
@@ -209,7 +216,7 @@ function JSONP(url, callback){
 You can use `JSONP` as follows:
 
 {% highlight javascript %}
-  JSONP(https://search.twitter.com/search.json?q=chimpanzee&callback=?, function(data){
+  JSONP('https://search.twitter.com/search.json?q=chimpanzee&callback=?', function(data){
     console.log(data);
   });
 {% endhighlight %}

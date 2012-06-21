@@ -120,7 +120,7 @@ function toScreen(data){
 }
 
 function search(tag){
-  var url = "https://api.instagram.com/tags/" + tag + "/media/recent?callback=?&amp;client_id=XXXXXXXXX"
+  var url = "https://api.instagram.com/v1/tags/" + tag + "/media/recent?callback=?&amp;client_id=XXXXXXXXX"
   $.getJSON(url, toScreen);
 }
 {% endhighlight %}

@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: index
 meta_keywords: javascript, json-p, jsonp, json, ajax
 meta_description: Making cross-domain requests. What exactly is JSON-P all about?
 comment_id: eduvoyage-3
 title: JSON-P - What and Why?
-short: JSON-P - What and Why?
 pretty_date: Friday, 11 May 2012
+extract: JSON-P is a widely used technique for circumnavigating the web browsers security block on cross domain Ajax requests. How can you implement it?
 ---
 
 <p class='intro'>

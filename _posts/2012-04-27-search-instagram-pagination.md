@@ -1,11 +1,11 @@
 ---
-layout: post
+layout: index
 meta_keywords: javascript, instagram, api, web app, pagination
-meta_description: Continuing from last weeks tutorial, I'll be implementing pagination.
+meta_description: Adding pagination to our Instagram web app.
 comment_id: eduvoyage-2
 title: Instagram Web App Tutorial Part 2 - Implementing Pagination
-short: Instagram Web App Tutorial Part 2
 pretty_date: Wednesday, 27 April 2012
+extract: Instagram's API makes pagination easy. This is how we're going to do it.
 ---
 
 <p class='intro'>

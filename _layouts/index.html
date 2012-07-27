@@ -11,7 +11,9 @@
           </small>
         </p>
       </div>
-      {{ post.content  | markdownify }}
+      <p class='intro'>
+      {{ post.extract }}
+      </p>
       </div>
   {% endfor %}
     </div>
@@ -33,4 +35,3 @@
     }());
 </script>
 {% include footer.html %}
-

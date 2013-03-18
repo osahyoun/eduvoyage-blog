@@ -166,11 +166,21 @@ h3 a, h1.title a  {
   height: 40px;
   top: 0;
   margin-bottom: 50px;
-  background: white;
-  position: fixed;
+  background: #FAFAFA;
+  background: -moz-linear-gradient(#FAFAFA,#EAEAEA);
+/*  background: -webkit-linear-gradient(#EAEAEA,#FAFAFA);*/
+  background-image: -webkit-linear-gradient(top, #FAFAFA, #EAEAEA);
+background-image: -webkit-linear-gradient(top, #F5FBFF, #E4F0FF);
+background: white;
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa',endColorstr='#eaeaea')";
+/*  background: -moz-linear-gradient(#F5FBFF,#E4F0FF);
+  background: -webkit-linear-gradient(#F5FBFF,#E4F0FF);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5fbff',endColorstr='#e4f0ff')";
+*/  position: fixed;
   z-index: 10;
+/*  border-bottom: 1px solid #CEE0E7;*/
   box-shadow: 0 1px 0 rgba(255,255,255,0.4),0 0 10px rgba(0,0,0,0.1);
-}
+  }
 
 #header .wrap .wrap {
   float: left;
@@ -186,12 +196,8 @@ h3 a, h1.title a  {
   z-index: 100;
   position: fixed;
   height: 24px;
-  top: 10px;
+  top: 15px;
   text-indent: -1000px;
-}
-
-#header h1 a.boat {
-  background: transparent url(/images/boat.png) no-repeat 0 0;
 }
 
 #header .wrap {
@@ -323,15 +329,9 @@ ul#contact li {
 ------------------------------------------------------------ */
 
 div.entry {
-  margin-bottom: 30px;
-}
-
-div.entry h2 {
-  margin-bottom: 0;
-}
-
-div.entry p.date {
-  margin-top: 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #CEE0E7;
+  padding-bottom: 30px;
 }
 
 
@@ -521,54 +521,4 @@ p.intro {
 #right_col p.twitter-button {
   margin-left: 30px;
   margin-top: 30px;
-}
-
-div.follow {
-  margin: 10px 0 10px 30px;
-}
-
-div.feed-icon {
-  margin-top: 5px;
-}
-
-div.about {
- margin: 10px 30px 20px 30px;
-}
-
-div.about p {
-  font-size: 16px;
-  line-height: 20px;  
-  margin: 0;
-}
-
-div.retweet {
-  margin-left: 30px;
-}
-
-div.retweet.small {
-  margin-left: 0;
-}
-
-
-div.feed a img {
-   float: left;
-   margin-right: 10px;
-   width: 20px;
-}
-
-div.feed {
-  margin-bottom: 20px;
-  margin-left: 30px;
-}
-
-div.feed h4, div.feed p {
-  font-size: 19px;
-  line-height: 22px;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-div.feed p {
-  font-size: 14px;
 }

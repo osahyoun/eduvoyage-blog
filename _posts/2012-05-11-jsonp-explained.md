@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: show
 meta_keywords: javascript, json-p, jsonp, json, ajax
 meta_description: Making cross-domain requests. What exactly is JSON-P all about?
 comment_id: eduvoyage-3

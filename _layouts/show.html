@@ -8,8 +8,13 @@
       </div>
     </div>
     <div id='right_col'>
+      <div class='about'>
+        <h3>About</h3>
+        <p>Little web dev tutorials.</p>
+      </div>
+      {% include feed.html %}
+      {% include retweet.html %}
     {% include articles.html%}
-    {% include twitter_button.html  %}
     </div>
 </div>
 {% include footer.html %}

@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: show
 meta_keywords: javascript, instagram, api, web app, pagination
 meta_description: Adding pagination to our Instagram web app.
 comment_id: eduvoyage-2
@@ -12,7 +12,7 @@ extract: Instagram's API makes pagination easy. This is how we're going to do it
 This post follows on from <a href='http://eduvoyage.com/instagram-search-app.html'>last week's</a>. I'll be implementing pagination.
 </p>
 
-A working version of this app is located [here](http://grammy.eduvoyage.com), and you can download the source code from [github](https://github.com/osahyoun/instagram-search/zipball/v0.2).
+A working version of this app is located [here](http://grammy.eduvoyage.com), and you can view the code at [github](https://github.com/osahyoun/instagram-search/).
 
 I quite like google-image's solution to this problem, which is to have a single 'Show more results' button at the bottom of the page.
 

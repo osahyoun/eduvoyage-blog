@@ -1,3 +1,11 @@
 permalink: none
-markdown: maruku
+markdown: kramdown
 pygments: true
+name: eduVoyage
+description: Bits and bobs on learning the art of Web App Development.
+url: http://eduvoyage.com
+feed_url: http://feeds.feedburner.com/eduvoyage
+domain: eduvoyage.com
+paginate: 1
+tag_page_layout: index
+tag_page_dir: tag

@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: show
 meta_keywords: javascript, instagram, api, web app
 meta_description: Creating a web app with Instagram's API.
 comment_id: eduvoyage-1
@@ -12,7 +12,7 @@ extract: This post will document my attempt at creating a simple, single page we
 This post will document my attempt at creating a simple, single page web app, allowing a visitor to search Instagram for photos by tag. You can see the working app <a href='http://grammy.eduvoyage.com'>here</a>.
 </p>
 
-This app was developed on a webkit browser (Google Chrome).You can download code as a zipped package from [github](https://github.com/osahyoun/instagram-search/zipball/v0.1). Clone the codebase [here](https://github.com/osahyoun/instagram-search).
+This app was developed on a webkit browser (Google Chrome). View the code at [github](https://github.com/osahyoun/instagram-search/).
 
 Getting started, I visit Instagram's [API documentation](http://instagr.am/developer/) to learn how I can search for photos by tag. Registration is required, so I follow the instructions under **GETTING STARTED**.
 

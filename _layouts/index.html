@@ -1,23 +1,53 @@
 {% include header.html %}
 <div class="wrap">
   <div class="main main_left" id='left_col'>
-  {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <div class='entry'>
-      <h2 class='shadow'><a href="{{post.url}}">{{ post.title }}</a></h2>
+      <h2 class='shadow'><a href="{{post.url}}">{{ post.title }}</a></h2>      
       <div class='sub'>
         <p class='date shadow'>{{post.pretty_date)}}
           / <small>
             <a data-disqus-identifier={{post.comment_id}} href="{{post.url}}#disqus_thread">comments</a>
           </small>
         </p>
+        <div class='retweet small'>
+          <a href="https://twitter.com/share" data-url="{{site.url}}{{post.url}}" class="twitter-share-button" data-via="omarsahyoun" data-size="small">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>      
+        </div>      
+        
       </div>
-      <p class='intro'>
-      {{ post.extract }}
-      </p>
+      <div class="post">
+        {{ post.content }}
       </div>
+    </div>
   {% endfor %}
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="/page{{paginator.previous_page}}" class="previous">Previous</a>
+    {% else %}
+      <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+    {% if paginator.next_page %}
+      <a href="/page{{paginator.next_page}}" class="next ">Next</a>
+    {% else %}
+      <span class="next ">Next</span>
+    {% endif %}
+  </div>
+  
     </div>
     <div id='right_col'>
+      <div class='about'>
+        <h3>About</h3>
+        <p>Little web dev tutorials.</p>
+
+      </div>
+      
+      
+      {% include feed.html %}
+      
       {% include articles.html%}
     </div>
 </div>

@@ -1,0 +1,22 @@
+/* line 3, ../_scss/blog.css.scss */
+body {
+  background: green;
+  padding: 0;
+}
+/* line 6, ../_scss/blog.css.scss */
+body p {
+  color: green;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 9, ../_scss/blog.css.scss */
+body p em {
+  color: red;
+}
+/* line 11, ../_scss/blog.css.scss */
+body p em.pp {
+  color: purple;
+}
